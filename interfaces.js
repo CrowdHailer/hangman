@@ -34,6 +34,22 @@ function App (state, adapters) {
 var ui = new UIDOM(document, window);
 var app = new App({}, {ui: ui});
 
+// testing
+var uiFake = {
+  connect: function (_app) {
+    // ignore it
+  },
+  render: function (state) {
+    this.state = state;
+  }
+};
+
+// Given app = new App(state, services)
+
+// When app.doSomething
+
+// Then var state = ui.getLastRenderState()
+
 ///////////////////////////////////////
 
 // Needs a ui with all the call backs for testing
