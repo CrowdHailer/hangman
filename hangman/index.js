@@ -15,9 +15,10 @@ export default function Hangman (config, services) {
   };
 
   var view = this.getService('view');
-
+  var state = ''
   this.setState = function (newState) {
-    view.render(newState);
+    state = state + newState
+    view.render(state);
   };
 }
 

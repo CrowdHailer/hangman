@@ -16,7 +16,11 @@ export default function Page () {
       $contents.innerHTML = state;
     }
   };
+  var page = this;
   ready(function () {
     $contents = document.getElementById('contents');
+    $contents.addEventListener('click', function (e) {
+      page.actionCallback(e)
+    });
   });
 }

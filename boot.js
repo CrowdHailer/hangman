@@ -9,10 +9,15 @@ import Page from './services/view/Page'
 
 
 // var services = {shouter: new ClassyAlerter()};
+var page = new Page()
 var services = {
   shouter: StatelessAlerter,
-  view: new Page()
+  view: page
 };
 
 var hangman = new Hangman(config, services);
+
+page.actionCallback = function () {
+  hangman.setState('newew');
+};
 export default hangman
