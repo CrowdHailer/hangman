@@ -11,6 +11,7 @@ function UIDOM (document, window) {
   });
 }
 
+// could easily separate ui and view
 function App (state, adapters) {
   state = Object.assign({}, defaultState, state);
   var ui = adapters.ui;
@@ -33,6 +34,7 @@ function App (state, adapters) {
 
 var ui = new UIDOM(document, window);
 var app = new App({}, {ui: ui});
+ui.connect(app) // Optional
 
 // testing
 var uiFake = {
