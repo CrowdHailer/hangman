@@ -10,3 +10,5 @@ The complexities of data flow between ui and domain are alot more interesting in
 - Having the domain define port interfaces that are implemented using adapters.
 - Having the domain model be stateless and have the infrastructure code manage the current version of the state.
 - Having the domain model manage state and communication between ui, domain and services be event driven. vaguly emulating actors and message passing.
+
+http://radar.oreilly.com/2014/03/javascript-without-the-this.html
